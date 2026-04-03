@@ -363,16 +363,14 @@
                     
                     ctx.quadraticCurveTo(cpX, cpY, e.x, e.y);
                     
-                    // Draw dashed mechanism curly arrow
+                    // Draw solid mechanism curly arrow
                     ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-                    ctx.lineWidth = 1.4;
-                    ctx.setLineDash([4, 4]);
+                    ctx.lineWidth = 1.6;
                     ctx.stroke();
-                    ctx.setLineDash([]);
                     
                     // Arrowhead calculation
                     const angle = Math.atan2(e.y - cpY, e.x - cpX);
-                    const headLen = 7;
+                    const headLen = 10;
                     ctx.beginPath();
                     ctx.moveTo(e.x, e.y);
                     ctx.lineTo(e.x - headLen * Math.cos(angle - Math.PI / 6), e.y - headLen * Math.sin(angle - Math.PI / 6));
