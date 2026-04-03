@@ -323,6 +323,7 @@
     }
 
     function drawMechanisms() {
+        // Version v2.2 - Solid White Arrows
         const nuNodes = [];
         const eNodes = [];
         
@@ -347,7 +348,7 @@
                 
                 if (distSq < 20000) { // proximity radius ~141px
                     const dist = Math.sqrt(distSq);
-                    const alpha = (1 - dist / 141) * 0.85; // fade smoothly 
+                    const alpha = (1 - dist / 141) * 1.0; // full opacity 
                     
                     ctx.beginPath();
                     ctx.moveTo(nu.x, nu.y);
@@ -365,12 +366,12 @@
                     
                     // Draw solid mechanism curly arrow
                     ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-                    ctx.lineWidth = 1.6;
+                    ctx.lineWidth = 2.0;
                     ctx.stroke();
                     
                     // Arrowhead calculation
                     const angle = Math.atan2(e.y - cpY, e.x - cpX);
-                    const headLen = 10;
+                    const headLen = 12;
                     ctx.beginPath();
                     ctx.moveTo(e.x, e.y);
                     ctx.lineTo(e.x - headLen * Math.cos(angle - Math.PI / 6), e.y - headLen * Math.sin(angle - Math.PI / 6));
