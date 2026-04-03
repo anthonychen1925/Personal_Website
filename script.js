@@ -8,6 +8,7 @@
 // 1. REALISTIC MOLECULAR BACKGROUND
 // ——————————————————————————————
 (function initCanvas() {
+    console.log('BioChem-Portfolio-v2.3: Mechanisim Visualizer Engaged');
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let width, height;
