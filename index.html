@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Chen | Bioinformatics & Biochemistry @ UCSD</title>
+    <meta name="description" content="Anthony Chen — Bioinformatics and Biochemistry major at UC San Diego. Computational chemistry researcher, organic chemistry tutor, and aspiring scientist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg class="benzene-logo" viewBox="0 0 100 100" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+                    <line x1="25" y1="33" x2="25" y2="67" stroke="currentColor" stroke-width="5" />
+                    <line x1="45" y1="83" x2="75" y2="65" stroke="currentColor" stroke-width="5" />
+                    <line x1="75" y1="35" x2="45" y2="17" stroke="currentColor" stroke-width="5" />
+                </svg>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="eyebrow-text">University of California, San Diego</span>
+            </div>
+            <h1 class="hero-name">
+                <span class="gradient-text">Anthony Chen</span>
+            </h1>
+            <div class="hero-tagline">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                I'm an undergraduate student double majoring in <span class="highlight-bio">Bioinformatics</span> and 
+                <span class="highlight-chem">Biochemistry</span> with a minor in Computer Science at <strong>UC San Diego</strong>. 
+                I'm fascinated by the complexity of biology, chemistry, and the molecular processes that govern life. 
+                Merging computational methods with biochemical knowledge to push the boundaries of biological/chemical 
+                knowledge and create novel technologies to tackle complex problems is what I'm passionate about, especially 
+                in this exciting age of artificial intelligence. I'm deeply curious and always ready to learn and work hard.
+            </p>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">
+                    <span class="btn-icon">🔬</span> Explore My Research
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-icon">✉</span> Get In Touch
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a <span class="highlight-bio">Computational Chemistry Undergraduate Researcher</span> working in the <span class="highlight-chem">Skaggs School of Pharmacy 
+                        and Pharmaceutical Sciences</span> under Dr. Ruben Abagyan. The Abagyan lab focuses on structure-based 
+                        drug discovery and optimization for target identification and protein modeling with an emphasis on 
+                        multi-target pharmacology. I write bash scripts to extract information from specific protein targets 
+                        from the Protein Data Bank for multi-target pharmacology profiling. I am also an <span class="highlight-chem">Organic Chemistry 
+                        Tutor</span> under the <span class="highlight-chem">UCSD Department of Chemistry and Biochemistry</span> who schedules in-person or online 
+                        one-on-one tutoring sessions for students who need help studying for organic chemistry.
+                    </p>
+                    <p>
+                        I'm a deeply curious person who loves anything related to biology, chemistry, computer science, and math. 
+                        In my free time, I like to work out, hike, play chess, do math problems, and spend time with friends 
+                        and family. Rap and jazz are my favorite music genres, and I also love attending hackathons!
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="info-card glass-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span class="card-dot green"></span>
+                                <span class="card-dot yellow"></span>
+                                <span class="card-dot red"></span>
+                            </div>
+                            <span class="card-title">lab_notebook.txt</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="notebook-entry">
+                                <span class="nb-label">Name</span>
+                                <span class="nb-value">Anthony Chen</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">University</span>
+                                <span class="nb-value">UC San Diego</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">GPA</span>
+                                <span class="nb-value highlight-chem">3.98</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">Majors</span>
+                                <span class="nb-value">Bioinformatics, Biochemistry</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">Minor</span>
+                                <span class="nb-value">Computer Science</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">Graduation</span>
+                                <span class="nb-value">June 2028</span>
+                            </div>
+                            <div class="notebook-entry">
+                                <span class="nb-label">Focus</span>
+                                <span class="nb-value">Computational Chemistry<br>& Drug Discovery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Research &amp; Lab Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-list">
+
+                <!-- Experience 1: Abagyan Lab -->
+                <div class="exp-card glass-card" data-reveal>
+                    <div class="exp-image">
+                        <img src="https://cdn.rcsb.org/images/structures/4hhb_assembly-1.jpeg" alt="3D ribbon diagram of human hemoglobin protein structure from the Protein Data Bank" loading="lazy">
+                        <div class="exp-image-overlay"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-badge badge-chem">Research</div>
+                        <h3>Computational Chemistry Undergraduate Researcher</h3>
+                        <h4>Dr. Ruben Abagyan Lab · San Diego, CA</h4>
+                        <span class="exp-date">Dec 2025 – Present</span>
+                        <ul>
+                            <li>Using Linux and the Protein Data Bank to extract structural data for specific biomedical targets</li>
+                            <li>Discovering new drug leads with an emphasis on multi-target pharmacology profiling</li>
+                            <li>Applying computational methods to map molecular interactions and identify therapeutic candidates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Organic Chemistry Tutor -->
+                <div class="exp-card glass-card" data-reveal>
+                    <div class="exp-body full">
+                        <div class="exp-badge badge-chem">Teaching</div>
+                        <h3>Organic Chemistry Tutor</h3>
+                        <h4>UCSD Department of Chemistry and Biochemistry</h4>
+                        <span class="exp-date">Oct 2025 – Present</span>
+                        <ul>
+                            <li>Conducting one-on-one tutoring sessions helping students master reaction mechanisms, stereochemistry, and synthesis strategies in Organic Chemistry</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3: General Chemistry Lab -->
+                <div class="exp-card glass-card" data-reveal>
+                    <div class="exp-image">
+                        <img src="images/gen_chem_lab.png" alt="General Chemistry Laboratory Setup" loading="lazy">
+                        <div class="exp-image-overlay"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-badge badge-chem">Lab</div>
+                        <h3>General Chemistry Lab</h3>
+                        <h4>UCSD</h4>
+                        <ul>
+                            <li>Synthesized Iron (III) Oxalate compound using oxalic acid to create Fe(NH₄)₂(SO₄)₂, followed by crystallization and vacuum filtration</li>
+                            <li>Performed gravimetric analysis to determine molarity of aluminum in unknown solutions using 8-hydroxyquinoline precipitation</li>
+                            <li>Conducted acid-base titration by standardizing 0.1 M NaOH with KHP, mapping titration curves and calculating equivalence points</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4: Plant Biology Lab -->
+                <div class="exp-card glass-card" data-reveal>
+                    <div class="exp-image">
+                        <img src="images/plant_bio_lab.png" alt="Colorimetric assay Biolog 96-well plate" loading="lazy">
+                        <div class="exp-image-overlay"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-badge badge-chem">Lab</div>
+                        <h3>Plant Biology Lab</h3>
+                        <h4>UCSD</h4>
+                        <ul>
+                            <li>Collected soil samples from local Lemonade Berry and California Sagebrush plants to study soil conditions and microbiomes</li>
+                            <li>Compared carbon source metabolization between soil microbiomes through microbial assays and statistical t-tests</li>
+                            <li>Analyzed microbial populations through microbial plating, PCR, gel electrophoresis, and chi-square analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-featured glass-card" data-reveal>
+                <div class="project-header">
+                    <div class="project-icon">🧬</div>
+                    <div class="project-links">
+                        <div class="project-link-wrapper">
+                            <span class="project-label">Code:</span>
+                            <a href="https://github.com/anthonychen1925/CSF-Classifier" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub Repository">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-link-wrapper">
+                            <span class="project-label">Presentation</span>
+                            <a href="https://docs.google.com/presentation/d/15B2C5kGLak0XuRaB1VRYIxbtVcA9XkezSbgIcmCy_ng/edit?slide=id.p#slide=id.p" target="_blank" rel="noopener noreferrer" class="project-link" title="Project Slideshow">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="21"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="project-title">Cerebrospinal Fluid Single-Cell RNA Sequencing ML Disease Classifier</h3>
+                <p class="project-description">
+                    Built at UCSD's undergraduate bioinformatics hackathon, this project involved web scraping 
+                    <strong>1,000+ single-cell RNA sequencing</strong> cerebrospinal fluid datasets from Gene Expression Omnibus. 
+                    I merged the data into a high-dimensional matrix using the <strong>Anndata library</strong>, 
+                    visualized cellular clusters with <strong>UMAP</strong> and <strong>Scanpy</strong>, and trained a 
+                    <strong>scikit-learn random forest classifier</strong> that predicts patient disease states with ~70% accuracy.
+                </p>
+                <p class="project-description-sub">
+                    Applied <strong>Principal Component Analysis (PCA)</strong> to reduce dimensionality and reveal 
+                    biologically meaningful groupings across sample clusters.
+                </p>
+                <div class="project-tags">
+                    <span class="tag tag-bio">RNA-seq</span>
+                    <span class="tag tag-bio">Scanpy</span>
+                    <span class="tag tag-bio">Anndata</span>
+                    <span class="tag tag-bio">PCA</span>
+                    <span class="tag tag-bio">UMAP</span>
+                    <span class="tag tag-bio">scikit-learn</span>
+                    <span class="tag tag-bio">Gene Expression Omnibus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Skills &amp; Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Lab Techniques -->
+                <div class="skill-category glass-card" data-reveal>
+                    <div class="skill-icon-wrapper">
+                        <span class="skill-emoji">⚗️</span>
+                    </div>
+                    <h3>Lab Techniques</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill skill-green">Distillation</span>
+                        <span class="skill-pill skill-green">Chromatography</span>
+                        <span class="skill-pill skill-green">Acid-base Titration</span>
+                        <span class="skill-pill skill-green">Gravimetric Analysis</span>
+                        <span class="skill-pill skill-green">DNA Extraction</span>
+                        <span class="skill-pill skill-green">PCR</span>
+                        <span class="skill-pill skill-green">Gel Electrophoresis</span>
+                        <span class="skill-pill skill-green">Microbial Plating</span>
+                        <span class="skill-pill skill-green">Bacterial DNA Modification</span>
+                        <span class="skill-pill skill-green">Vacuum Filtration</span>
+                    </div>
+                </div>
+                <!-- Computational -->
+                <div class="skill-category glass-card" data-reveal>
+                    <div class="skill-icon-wrapper">
+                        <span class="skill-emoji">💻</span>
+                    </div>
+                    <h3>Computational</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill skill-blue">Python</span>
+                        <span class="skill-pill skill-blue">Java</span>
+                        <span class="skill-pill skill-blue">R</span>
+                        <span class="skill-pill skill-blue">Linux</span>
+                        <span class="skill-pill skill-blue">MATLAB</span>
+                        <span class="skill-pill skill-blue">Excel</span>
+                    </div>
+                </div>
+                <!-- Coursework -->
+                <div class="skill-category glass-card full-width" data-reveal>
+                    <div class="skill-icon-wrapper">
+                        <span class="skill-emoji">📚</span>
+                    </div>
+                    <h3>Relevant Coursework</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill skill-green">Organic Chemistry I &amp; II</span>
+                        <span class="skill-pill skill-green">General Chemistry Lab</span>
+                        <span class="skill-pill skill-green">Biochemical Structure &amp; Function</span>
+                        <span class="skill-pill skill-green">Genetics</span>
+                        <span class="skill-pill skill-green">Plant Biology Lab</span>
+                        <span class="skill-pill skill-blue">Data Analysis for Biologists</span>
+                        <span class="skill-pill skill-blue">Probability &amp; Statistics for Bioinformatics</span>
+                        <span class="skill-pill skill-blue">Object-Oriented Programming in Java</span>
+                        <span class="skill-pill skill-blue">Data Structures</span>
+                        <span class="skill-pill skill-blue">Linear Algebra</span>
+                        <span class="skill-pill skill-blue">Discrete Mathematics</span>
+                        <span class="skill-pill skill-blue">Calculus &amp; Analytic Geometry</span>
+                        <span class="skill-pill skill-blue">Algorithms &amp; Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    Feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:anc096@ucsd.edu" class="contact-card glass-card" id="contact-email">
+                        <div class="contact-icon">✉️</div>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">anc096@ucsd.edu</span>
+                    </a>
+                    <a href="https://github.com/anthonychen1925" target="_blank" rel="noopener noreferrer" class="contact-card glass-card" id="contact-github">
+                        <div class="contact-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">anthonychen1925</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anthony-chen-056492399" target="_blank" rel="noopener noreferrer" class="contact-card glass-card" id="contact-linkedin">
+                        <div class="contact-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Anthony Chen</span>
+                    </a>
+                    <a href="tel:925-293-2923" class="contact-card glass-card" id="contact-phone">
+                        <div class="contact-icon">📞</div>
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">925-293-2923</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-formula">
+                    C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP
+                </div>
+                <p class="footer-text">
+                    Designed &amp; Built by Anthony Chen · &copy; 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
